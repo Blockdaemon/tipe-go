@@ -1,5 +1,7 @@
 # tipe-go
 
+[![GoDoc](https://godoc.org/github.com/Blockdaemon/tipe-go?status.svg)](https://godoc.org/github.com/Blockdaemon/tipe-go)
+
 Tipe Golang SDK
 
 ```bash
@@ -38,7 +40,7 @@ func main() {
 	if err := client.Documents.Get(
 		context.Background(),
 		doc,
-		&tipe.GetDocumentOptions{
+		tipe.GetDocumentOptions{
 			SkuID: "MySkuID",
 			Depth: 1,
 		},
