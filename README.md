@@ -42,7 +42,6 @@ func main() {
 		doc,
 		tipe.GetDocumentOptions{
 			SkuID: "MySkuID",
-			Depth: 1,
 		},
 	); err != nil {
 		panic(err)

@@ -63,7 +63,7 @@ func (f HTMLField) StringSlice() []string {
 		return strs
 	}
 
-	return nil
+	return []string{}
 }
 
 type TextField struct {
