@@ -3,7 +3,6 @@ package tipe
 import (
 	"bytes"
 	"encoding/json"
-	"errors"
 	"fmt"
 	"io"
 	"net/http"
@@ -107,7 +106,7 @@ func (c *APIClient) do(req *http.Request, v interface{}) error {
 	// Check status for error code
 	// TODO: More accurate error
 	if resp.StatusCode >= 400 {
-		return errors.New("Bad Request")
+		return fmt.Errorf("Bad Request, code %v", resp.StatusCode)
 	}
 
 	if v != nil {
